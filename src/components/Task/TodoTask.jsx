@@ -1,13 +1,15 @@
 import React, { useContext } from "react";
 import { TodoContext } from "../../context/TodoContext";
+import styleTask from "./todoTask.module.css"
 
-const TodoTask = ({ task, toggleTask, removeTask, styleTask }) => {
+const TodoTask = ({ task, toggleTask, removeTask}) => {
   const { incrementCompletedTasks, decrementCompletedTasks } =
     useContext(TodoContext);
 
   return (
-    <div style={styleTask}>
+    <div className={styleTask.taskList}>
       <input
+        className={styleTask.checkBox}
         type="checkbox"
         checked={task.completed}
         onChange={(e) => {
@@ -17,14 +19,15 @@ const TodoTask = ({ task, toggleTask, removeTask, styleTask }) => {
             : decrementCompletedTasks();
         }}
       />
-      <h3>{task.title}</h3>
+      <h3 className={styleTask.task}>{task.title}</h3>
       <button
+      className={styleTask.buttonRemove}
         onClick={(e) => {
           removeTask(task.id);
           task.completed && decrementCompletedTasks();
         }}
       >
-        x
+        ❌
       </button>
     </div>
   );

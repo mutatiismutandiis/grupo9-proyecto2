@@ -1,0 +1,25 @@
+.inputText {
+    height: 4vh;
+    width: 17vw;
+    border-style: none;
+    background-color: #a39c9f4c;
+    border-radius: 5px;
+    font-family: monospace;
+    padding-left: 10px;
+}
+
+.inputText:focus {
+    background-color: rgba(3, 3, 250, 0.05);
+    outline: none
+}
+
+.addTaskButton {
+    border-style: none;
+    height: 4vh;
+    width: 5vw;
+    margin-left: 5px;
+    border-radius: 5px;
+    font-family: monospace;
+    color: #002a5b92;
+    cursor: pointer;
+}

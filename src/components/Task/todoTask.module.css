@@ -1,0 +1,26 @@
+.taskList {
+    font-size: medium;
+    display: flex;
+    align-items: center;
+}
+
+.buttonRemove {
+    border: none;
+    padding: 7px;
+    cursor: pointer;
+    background-color: #e5e5e564;
+    border-radius: 5px;
+    margin-left: 1px;
+}
+
+.checkBox {
+    cursor: pointer;
+}
+
+.task {
+    display: block;
+    width: 20vw;
+    padding: 7px;
+    background-color: #e5e5e564;
+    border-radius: 5px;
+}

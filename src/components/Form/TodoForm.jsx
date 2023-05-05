@@ -1,9 +1,11 @@
 import React from "react";
+import styleForm from "./todoForm.module.css";
 
-const TodoForm = ({ form, styleForm, handleSubmit, handleChange }) => {
+const TodoForm = ({ form, handleSubmit, handleChange }) => {
   return (
-    <form style={styleForm} onSubmit={handleSubmit}>
+    <form  onSubmit={handleSubmit}>
       <input
+        className={styleForm.inputText}
         type="text"
         name="title"
         onChange={handleChange}
@@ -11,7 +13,7 @@ const TodoForm = ({ form, styleForm, handleSubmit, handleChange }) => {
         required
         placeholder="Título de la tarea"
       />
-      <button>Add task</button>
+      <button className={styleForm.addTaskButton}>Add task</button>
     </form>
   );
 };
